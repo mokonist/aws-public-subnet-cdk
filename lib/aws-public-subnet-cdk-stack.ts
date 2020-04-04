@@ -24,6 +24,7 @@ export class AwsPublicSubnetCdkStack extends Stack {
       vpcId: vpc.ref,
       cidrBlock: "10.0.0.0/24",
       availabilityZone: this.availabilityZones[0],
+      mapPublicIpOnLaunch: true,
       tags: [{ key: "Name", value: "subnet" }],
     });
 
